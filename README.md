@@ -60,7 +60,9 @@ Esta escena tiene 2 modos, uno por cada apartado. Se inicia en el primero por de
       if (mode) {
         if (dr == null || dr.Status != SpeechSystemStatus.Running) {
           if (dr == null) {
-            PhraseRecognitionSystem.Shutdown();
+            if (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped) {
+              PhraseRecognitionSystem.Shutdown();
+            }
             dr = new DictationRecognizer();
             dr.DictationResult += DicRecognizer;
           }
@@ -205,7 +207,9 @@ public class RocketScript : MonoBehaviour {
       if (mode) {
         if (dr == null || dr.Status != SpeechSystemStatus.Running) {
           if (dr == null) {
-            PhraseRecognitionSystem.Shutdown();
+            if (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped) {
+              PhraseRecognitionSystem.Shutdown();
+            }
             dr = new DictationRecognizer();
             dr.DictationResult += DicRecognizer;
           }
