@@ -1,4 +1,4 @@
-# Práctica 4: Micrófono y cámara <!-- omit in toc -->
+# Práctica 5: Reconocimiento de Voz <!-- omit in toc -->
 
 ## Tabla de contenidos <!-- omit in toc -->
 - [Objetivo](#objetivo)
